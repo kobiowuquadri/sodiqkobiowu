@@ -3,8 +3,8 @@ const navSlide = () => {
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
 
+    // Toggle Nav
     burger.addEventListener('click', () => {
-        // Toggle Nav
         nav.classList.toggle('nav-active');
 
         // Animate Links
@@ -19,8 +19,20 @@ const navSlide = () => {
         // Burger Animation
         burger.classList.toggle('toggle');
     });
+
+    // Close menu when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('nav-active');
+            burger.classList.remove('toggle');
+            navLinks.forEach(link => {
+                link.style.animation = '';
+            });
+        });
+    });
 }
 
+// Initialize navigation
 navSlide();
 
 

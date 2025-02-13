@@ -232,28 +232,64 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Update the Mobile Navigation styles */
 @media screen and (max-width: 768px) {
     .nav-links {
-        position: absolute;
+        position: fixed;
         right: 0;
-        height: 92vh;
-        top: 8vh;
-        background-color: rgba(0, 0, 0, 0.9);
+        height: 100vh;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.95);
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        justify-content: center;
+        width: 100%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+        z-index: 998;
     }
 
     .nav-links li {
-        opacity: 0;
         margin: 2rem 0;
+        opacity: 0;
     }
 
     .burger {
         display: block;
+        z-index: 999;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    .nav-active li {
+        opacity: 1;
+        transition: opacity 0.5s ease 0.3s;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
