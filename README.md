@@ -52,7 +52,7 @@ git clone https://github.com/kobiowuquadri/sodiqkobiowu
 ### 2. Navigate to the project directory:
 
 ```bash
-cd sodiq-portfolio
+cd sodiqkobiowu
 ```
 
 ### 3. Open the `index.html` file in your web browser.
