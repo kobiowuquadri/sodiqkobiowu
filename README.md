@@ -71,7 +71,7 @@ to change.
 ## License
 [MIT](
     https://choosealicense.com/licenses/mit/)
-    ## Acknowledgments
+## Acknowledgments
     - [Bootstrap](https://getbootstrap.com/)
     - [Animate.css](https://animate.style/)
     - [Font Awesome](https://fontawesome.com/)
