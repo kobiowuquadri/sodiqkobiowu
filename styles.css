@@ -672,3 +672,36 @@ body {
     left: 0;
     color: #ff4d5a;
 }
+/* Add to your Portfolio Section styles */
+.portfolio-item-inner:hover .portfolio-overlay {
+    opacity: 1;
+    backdrop-filter: blur(3px);
+}
+
+.portfolio-link {
+    font-size: 2.5rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.portfolio-link:hover {
+    color: #ff4d5a;
+    transform: scale(1.1);
+}
+
+.portfolio-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-overlay p {
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item-inner:hover .portfolio-overlay h3,
+.portfolio-item-inner:hover .portfolio-overlay p {
+    transform: translateY(0);
+}
